@@ -20,3 +20,15 @@ const onlyNumbers = things.filter(thing => {
 
 console.log(onlyNumbers);
 
+
+// DIFFERENT WAYS TO PRINT ONE METHOD
+
+
+//ONE
+function printGrocery(element){
+  console.log(element);
+}
+groceries.forEach(printGrocery);
+
+//TWO
+groceries.forEach(groceryItem => console.log(groceryItem));
