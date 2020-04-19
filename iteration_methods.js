@@ -32,3 +32,16 @@ groceries.forEach(printGrocery);
 
 //TWO
 groceries.forEach(groceryItem => console.log(groceryItem));
+
+//example 
+const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+// Iterate over fruits below
+fruits.forEach(fruits=> console.log('I want to eat a ' + fruits));
+
+
+
+//USING ARITHMETIC IN A ITERATION METHOD
+
+const smallNumbers = bigNumbers.map(bigNumbers => {
+   return bigNumbers / 100; });
