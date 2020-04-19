@@ -45,3 +45,28 @@ fruits.forEach(fruits=> console.log('I want to eat a ' + fruits));
 
 const smallNumbers = bigNumbers.map(bigNumbers => {
    return bigNumbers / 100; });
+
+
+
+
+// USING.filter example code. RETURNS LENGTH OF A STRING
+
+const longFavoriteWords =  favoriteWords.filter(favoriteWords=> {return favoriteWords.length > 7});
+
+
+//ACCESSING THE FIRST LETTER OF A STRING
+
+const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+const foundAnimal = animals.findIndex(animal => {
+  return animal === 'elephant';
+}); //RETURNS INDEX NUMBER
+
+const startsWithS = animals.findIndex(animal => {
+  return animal[0] === 's' ? true : false;
+});//RETURNS ANIMAL WITH FIRST LETTER S
+
+
+
+
+
