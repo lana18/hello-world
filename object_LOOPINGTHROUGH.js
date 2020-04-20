@@ -27,3 +27,9 @@ let spaceship = {
 for (let crewMember in spaceship.crew) {
   console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`)
 };
+
+
+/*Our for...in will iterate through each element of 
+the spaceship.crew object. In each iteration, the variable 
+crewMember is set to one of spaceship.crew‘s keys, 
+enabling us to log a list of crew members’ role and name.*/
