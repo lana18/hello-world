@@ -1,0 +1,78 @@
+let pan_found = false
+let oiled = false
+let heat_on = false
+let cooked = false
+let eggs_cooked = false
+let pan_put_away = false
+
+function find_pan(){
+  // Find a pan to cook with
+  console.log('Found a pan!');
+  pan_found = true;
+}
+
+function pour_oil(){
+  // Pour oil over a pan
+  if (pan_found) {
+    oiled = true
+    console.log('Poured oil over the pan');
+  } else {
+    console.log('Oops, oil is spilt everywhere!');
+    throw new Error ("Something went wrong...");
+  }
+}
+
+function turn_heat(on){
+  // Turn the heat on or off
+  // This function take in a boolean value
+  heat_on = on
+  if(on){
+    console.log('Heat turned on');
+  }else{
+    console.log('Heat turned off');
+  }
+}
+
+function cook_eggs_in_pan(number_of_eggs){
+  if (!pan_found) {
+    console.log('Oops, eggs are spilt everywhere!');
+    throw new Error ("Something went wrong...");
+  }
+  
+  if (!heat_on) {
+    console.log('Oops, eggs are not cooking!');
+    throw new Error ("Something went wrong...");
+  }
+
+  if (!oiled) {
+    console.log('Oops, eggs stuck to the pan, they needed some oil!');
+    throw new Error ("Something went wrong...");
+  }
+
+  if (number_of_eggs > 4) {
+    console.log('Oops, too many eggs in one pan!');
+    throw new Error ("Something went wrong...");
+  }
+
+  cooked = true
+  eggs_cooked = number_of_eggs;
+}
+
+function put_pan_away() {
+  pan_put_away = true
+  if (heat_on) {
+    console.log('Oops, heat is still on, now the house is burning!');
+    throw new Error ("Something went wrong...");
+  }
+  if (cooked) {
+    console.log('Congrats, you cooked ' + eggs_cooked + ' eggs! Enjoy!')
+  }
+}
+
+// WRITE YOUR CODE HERE:
+find_pan(); 
+turn_heat(true);
+pour_oil(); 
+cook_eggs_in_pan(3);
+turn_heat(false);
+put_pan_away(false);
